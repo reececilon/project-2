@@ -45,6 +45,7 @@ header {
 
 #controls {
     text-align: center;
+    padding: 20px;
 }
 
 /* Styling for play area */
@@ -111,6 +112,10 @@ header {
         width: 50%;
     }
 
+    .control {
+        margin: 15px 10px;
+    }
+
     .players {
         font-size: 3vw;
     }
@@ -132,6 +137,10 @@ header {
     
     #score-board {
         width: 200px;
+    }
+
+    .control {
+        margin: 10px 5px;
     }
 
     .inline {
