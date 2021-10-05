@@ -50,22 +50,27 @@ header {
 
 /* Styling for play area */
 
-#combat-arrows {
+#play-area {
     text-align: center;
-}
-
-#arrows {
-    color: #7498CC;
-    font-size: 2.5rem;
-    transform: scale(6, 2);
+    background-color: rgba(106, 107, 108, .1);
+    width: 90%;
+    margin: 0 auto;
 }
 
 .match {
-    width: 35%;
+    width: 100%;
     height: same-as-width;
+    border-radius: 50%;
     border-radius: 50%;
 }
 
-#computer, #player {
-    text-align: center;
+.inline {
+    display: inline-block;
+    width: 30%;
+    margin: 30px 50px;
+}
+
+.players {
+    color: #7498CC;
+    margin: 10px 0;
 }
