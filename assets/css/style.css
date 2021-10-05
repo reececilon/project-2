@@ -27,9 +27,36 @@ header {
 /* Styling the controls area */
 
 .control {
-    margin: 30px 15px;
+    margin: 20px 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border-style: none;
+    border: 2px solid #7498CC;
+    background-color: #211F20;
+    color: #7498CC;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+    text-transform: capitalize;
+}
+
+.control:hover {
+    transform: rotate(360deg);
 }
 
 #controls {
     text-align: center;
+}
+
+/* Styling for play area */
+
+#combat-arrows {
+    height: 100px;
+    text-align: center;
+}
+
+#arrows {
+    color: #7498CC;
+    font-size: 2.5rem;
+    transform: scale(6, 2);
 }
