@@ -57,17 +57,17 @@ header {
     border-radius: 15px;
 }
 
+.inline {
+    display: inline-block;
+    width: 30%;
+    margin: 30px 50px;
+}
+
 .match {
     width: 100%;
     height: same-as-width;
     border-radius: 50%;
     border-radius: 50%;
-}
-
-.inline {
-    display: inline-block;
-    width: 30%;
-    margin: 30px 50px;
 }
 
 .players {
@@ -107,6 +107,10 @@ header {
         font-size: 6vw;
     }
 
+    .inline {
+        width: 50%;
+    }
+
     .players {
         font-size: 3vw;
     }
@@ -118,4 +122,32 @@ header {
     #score-board > p {
         font-size: 2vw;
     }
+}
+
+@media screen and (max-width: 350px) {
+
+    #heading {
+        font-size: 6.5vw;
+    }
+    
+    #score-board {
+        width: 200px;
+    }
+
+    .inline {
+        width: 60%;
+    }
+
+    .players {
+        font-size: 3.5vw;
+    }
+
+    #score-board > h3 {
+        font-size: 3vw;
+    }
+
+    #score-board > p {
+        font-size: 2.5vw;
+    }
+
 }
