@@ -8,30 +8,35 @@
     <title>Rock to spock</title>
 </head>
 <body>
-    <header>Rock to spock</header>
+    <header>
+        <h1 id="heading">Rock to spock <i class="far fa-hand-rock"></i></h1>
+    </header>
     <div id="game-section">
         <div id="controls">
-            <button data-type="rock">rock</button>
-            <button data-type="paper">paper</button>
-            <button data-type="scizzors">scizzors</button>
-            <button data-type="lizard">lizard</button>
-            <button data-type="spock">spock</button>
+            <button data-type="rock" class="control">rock</button>
+            <button data-type="paper" class="control">paper</button>
+            <button data-type="scizzors" class="control">scizzors</button>
+            <button data-type="lizard" class="control">lizard</button>
+            <button data-type="spock" class="control">spock</button>
         </div>
         <div id="play-area">
             <div id="player">
-                <img src="assets/images/rock-spock.jpg" id="player-move" alt="Image of rock, paper, scizzors, spock, game"/>
+                <img src="assets/images/rock-spock.jpg" id="player-move"  class="match" alt="Image of rock, paper, scizzors, spock, game"/>
             </div>
             <div id="combat-arrows">
                 <p>arrows</p>
             </div>
             <div id="computer">
-                <img src="assets/images/rock-spock.jpg" id="comp-move" alt="Image of rock, paper, scizzors, spock, game"/>
+                <img src="assets/images/rock-spock.jpg" id="comp-move" class="match" alt="Image of rock, paper, scizzors, spock, game"/>
             </div>
         </div>
         <div id="score-board">
-            <p>score</p>
+            <p>Score board</p>
+            <br>
+            <p>Player <span id="p-score">0</span> : <span id="c-score">0</span> Computer</p>
         </div>
     </div>
     <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/9797ac3199.js" crossorigin="anonymous"></script>
 </body>
 </html>
