@@ -71,6 +71,13 @@ header {
     border-radius: 50%;
 }
 
+.rock, .paper, .scizzors, .lizard, .spock {
+    width: 100%;
+    height: same-as-width;
+    border-radius: 50%;
+    border-radius: 50%;
+}
+
 .players {
     color: #7498CC;
     margin: 10px 0;

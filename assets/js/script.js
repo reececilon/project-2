@@ -31,34 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-/*let choices = [
-    {
-    id: 1,
-    name: "rock",
-    wins: [3, 5]
-    },
-    {
-    id: 2,
-    name: "paper",
-    wins: [1, 4]
-    },
-    {
-    id: 3,
-    name: "scizzors",
-    wins: [2, 5]
-    },
-    {
-    id: 4,
-    name: "spock",
-    wins: [1, 3]
-    },
-    {
-    id: 5,
-    name: "lizard",
-    wins: [2, 4]
-    }
-];*/
-
 /**
  * Changes the comp move based on a random number and adds the corresponding class
  */
