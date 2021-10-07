@@ -5,11 +5,28 @@ document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
     
     for (let button of buttons) {
-        button.addEventListener("click", moveSelector());
+        button.addEventListener("click", function() {
+            let moveType = this.getAttribute("data-type");
+            
+            if (moveType === "rock") {
+                alert("yay you chose rock");
+            } else if (moveType === "paper") {
+                alert("yay you chose paper");
+            } else if (moveType === "scizzors") {
+                alert("yay you chose scizzors");
+            } else if (moveType === "Lizard") {
+                alert("yay you chose lizard");
+            } else if (moveType === "spock") {
+                alert("yay you chose spock");
+            } else {
+                alert("Unknown moveType! Aborting!")
+            }
+
+        });
     }
 });
 
-let choices = [
+/*let choices = [
     {
     id: 1,
     name: "rock",
@@ -35,10 +52,4 @@ let choices = [
     name: "lizard",
     wins: [2, 4]
     }
-];
-
-function moveSelector() {
-    
-    
-
-}
+];*/
