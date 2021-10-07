@@ -9,15 +9,15 @@ document.addEventListener("DOMContentLoaded", function() {
             let moveType = this.getAttribute("data-type");
             
             if (moveType === "rock") {
-                alert("yay you chose rock");
+                rockMove();
             } else if (moveType === "paper") {
-                alert("yay you chose paper");
+                paperMove();
             } else if (moveType === "scizzors") {
-                alert("yay you chose scizzors");
-            } else if (moveType === "Lizard") {
-                alert("yay you chose lizard");
+                scizzorsMove();
+            } else if (moveType === "lizard") {
+                lizardMove();
             } else if (moveType === "spock") {
-                alert("yay you chose spock");
+                spockMove();
             } else {
                 alert("Unknown moveType! Aborting!")
             }
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-/*let choices = [
+let choices = [
     {
     id: 1,
     name: "rock",
@@ -52,4 +52,39 @@ document.addEventListener("DOMContentLoaded", function() {
     name: "lizard",
     wins: [2, 4]
     }
-];*/
+];
+
+/**
+ * selects rock move for player and changes image accordingly
+ */
+function rockMove() {
+    document.getElementById("player-move").src = "assets/images/rock.png";
+}
+
+/**
+ * selects paper move for player and changes image accordingly
+ */
+function paperMove() {
+    document.getElementById("player-move").src = "assets/images/paper.png";
+}
+
+/**
+ * selects scizzors move for player and changes image accordingly
+ */
+function scizzorsMove() {
+    document.getElementById("player-move").src = "assets/images/scizzors.png";
+}
+
+/**
+ * selects lizard move for player and changes image accordingly
+ */
+function lizardMove() {
+    document.getElementById("player-move").src = "assets/images/lizard.png";
+}
+
+/**
+ * selects spock move for player and changes image accordingly
+ */
+function spockMove() {
+    document.getElementById("player-move").src = "assets/images/spock.png";
+}
