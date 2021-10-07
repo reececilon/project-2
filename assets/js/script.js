@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
             if (moveType === "rock") {
                 rockMove();
+                compMove();
             } else if (moveType === "paper") {
                 paperMove();
             } else if (moveType === "scizzors") {
@@ -55,10 +56,38 @@ let choices = [
 ];
 
 /**
+ * Changes the comp move based on a random number and adds the corresponding class
+ */
+function compMove() {
+    let cMove = Math.floor(Math.random()*4);
+
+    if (cMove === 0) {
+        document.getElementById("comp-move").src = "assets/images/rock.png";
+        document.getElementById("comp-move").setAttribute('class', 'rock');
+    } else if (cMove === 1) {
+        document.getElementById("comp-move").src = "assets/images/paper.png";
+        document.getElementById("comp-move").setAttribute('class', 'paper');
+    } else if (cMove === 2) {
+        document.getElementById("comp-move").src = "assets/images/scizzors.png";
+        document.getElementById("comp-move").setAttribute('class', 'scizzors');
+    } else if (cMove === 3) {
+        document.getElementById("comp-move").src = "assets/images/lizard.png";
+        document.getElementById("comp-move").setAttribute('class', 'lizard');
+    } else if (cMove === 4) {
+        document.getElementById("comp-move").src = "assets/images/spock.png";
+        document.getElementById("comp-move").setAttribute('class', 'spock');
+    } else {
+        alert("something wrong");
+    }
+}
+
+/**
  * selects rock move for player and changes image accordingly
  */
 function rockMove() {
     document.getElementById("player-move").src = "assets/images/rock.png";
+    document.getElementById("player-move").setAttribute('class', 'rock');
+    moveCompare();
 }
 
 /**
@@ -66,6 +95,8 @@ function rockMove() {
  */
 function paperMove() {
     document.getElementById("player-move").src = "assets/images/paper.png";
+    document.getElementById("player-move").setAttribute('class', 'paper');
+    moveCompare();
 }
 
 /**
@@ -73,6 +104,8 @@ function paperMove() {
  */
 function scizzorsMove() {
     document.getElementById("player-move").src = "assets/images/scizzors.png";
+    document.getElementById("player-move").setAttribute('class', 'scizzors');
+    moveCompare();
 }
 
 /**
@@ -80,6 +113,8 @@ function scizzorsMove() {
  */
 function lizardMove() {
     document.getElementById("player-move").src = "assets/images/lizard.png";
+    document.getElementById("player-move").setAttribute('class', 'lizard');
+    moveCompare();
 }
 
 /**
@@ -87,4 +122,30 @@ function lizardMove() {
  */
 function spockMove() {
     document.getElementById("player-move").src = "assets/images/spock.png";
+    document.getElementById("player-move").setAttribute('class', 'spock');
+    moveCompare();
+}
+
+
+
+function moveCompare() {
+    let pMove = document.getElementById("player-move").getAttribute("class"); 
+    if ( pMove === "rock") {
+        let pChoice = choices[0];
+        console.log(pChoice);
+    } else if (pMove === "paper") {
+        let pChoice = choices[1];
+        console.log(pChoice);
+    } else if (pMove === "scizzors") {
+        let pChoice = choices[2];
+        console.log(pChoice);
+    } else if (pMove === "lizard") {
+        let pChoice = choices[0];
+        console.log(pChoice);
+    } else if (pMove === "spock") {
+        let pChoice = choices[3];
+        console.log(pChoice);
+    } else {
+        alert("error!");
+    }
 }
