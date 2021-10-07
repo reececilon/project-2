@@ -13,12 +13,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 compMove();
             } else if (moveType === "paper") {
                 paperMove();
+                compMove();
             } else if (moveType === "scizzors") {
                 scizzorsMove();
+                compMove();
             } else if (moveType === "lizard") {
                 lizardMove();
+                compMove();
             } else if (moveType === "spock") {
                 spockMove();
+                compMove();
             } else {
                 alert("Unknown moveType! Aborting!")
             }
@@ -27,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-let choices = [
+/*let choices = [
     {
     id: 1,
     name: "rock",
@@ -53,32 +57,34 @@ let choices = [
     name: "lizard",
     wins: [2, 4]
     }
-];
+];*/
 
 /**
  * Changes the comp move based on a random number and adds the corresponding class
  */
 function compMove() {
-    let cMove = Math.floor(Math.random()*4);
+    let cMoveRandom = Math.floor(Math.random()*5);
 
-    if (cMove === 0) {
+    if (cMoveRandom === 0) {
         document.getElementById("comp-move").src = "assets/images/rock.png";
         document.getElementById("comp-move").setAttribute('class', 'rock');
-    } else if (cMove === 1) {
+    } else if (cMoveRandom === 1) {
         document.getElementById("comp-move").src = "assets/images/paper.png";
         document.getElementById("comp-move").setAttribute('class', 'paper');
-    } else if (cMove === 2) {
+    } else if (cMoveRandom === 2) {
         document.getElementById("comp-move").src = "assets/images/scizzors.png";
         document.getElementById("comp-move").setAttribute('class', 'scizzors');
-    } else if (cMove === 3) {
+    } else if (cMoveRandom === 3) {
         document.getElementById("comp-move").src = "assets/images/lizard.png";
         document.getElementById("comp-move").setAttribute('class', 'lizard');
-    } else if (cMove === 4) {
+    } else if (cMoveRandom === 4) {
         document.getElementById("comp-move").src = "assets/images/spock.png";
         document.getElementById("comp-move").setAttribute('class', 'spock');
     } else {
         alert("something wrong");
     }
+
+    moveCompare();
 }
 
 /**
@@ -87,7 +93,6 @@ function compMove() {
 function rockMove() {
     document.getElementById("player-move").src = "assets/images/rock.png";
     document.getElementById("player-move").setAttribute('class', 'rock');
-    moveCompare();
 }
 
 /**
@@ -96,7 +101,6 @@ function rockMove() {
 function paperMove() {
     document.getElementById("player-move").src = "assets/images/paper.png";
     document.getElementById("player-move").setAttribute('class', 'paper');
-    moveCompare();
 }
 
 /**
@@ -105,7 +109,6 @@ function paperMove() {
 function scizzorsMove() {
     document.getElementById("player-move").src = "assets/images/scizzors.png";
     document.getElementById("player-move").setAttribute('class', 'scizzors');
-    moveCompare();
 }
 
 /**
@@ -114,7 +117,6 @@ function scizzorsMove() {
 function lizardMove() {
     document.getElementById("player-move").src = "assets/images/lizard.png";
     document.getElementById("player-move").setAttribute('class', 'lizard');
-    moveCompare();
 }
 
 /**
@@ -123,29 +125,74 @@ function lizardMove() {
 function spockMove() {
     document.getElementById("player-move").src = "assets/images/spock.png";
     document.getElementById("player-move").setAttribute('class', 'spock');
-    moveCompare();
 }
 
 
 
 function moveCompare() {
     let pMove = document.getElementById("player-move").getAttribute("class"); 
-    if ( pMove === "rock") {
-        let pChoice = choices[0];
-        console.log(pChoice);
+    let cMove = document.getElementById("comp-move").getAttribute("class");
+    
+    if (pMove === "rock") {
+        if (cMove === "rock") {
+            alert("draw");
+        } else if (cMove === "Paper") {
+            alert("lose");
+        } else if (cMove === "scizzors") {
+            alert("win");
+        } else if (cMove === "lizard") {
+            alert("win");
+        } else if (cMove === "spock") {
+            alert("lose");
+        }
     } else if (pMove === "paper") {
-        let pChoice = choices[1];
-        console.log(pChoice);
+        if (cMove === "rock") {
+            alert("win");
+        } else if (cMove === "paper") {
+            alert("draw");
+        } else if (cMove === "scizzors") {
+            alert("lose");
+        } else if (cMove === "lizard") {
+            alert("lose");
+        } else if (cMove === "spock") {
+            alert("win");
+        }
     } else if (pMove === "scizzors") {
-        let pChoice = choices[2];
-        console.log(pChoice);
+        if (cMove === "rock") {
+                alert("lose");
+        } else if (cMove === "paper") {
+                alert("win");
+        } else if (cMove === "scizzors") {
+                alert("draw");
+        } else if (cMove === "lizard") {
+                alert("win");
+        } else if (cMove === "spock") {
+                alert("lose");
+        }
     } else if (pMove === "lizard") {
-        let pChoice = choices[0];
-        console.log(pChoice);
+        if (cMove === "rock") {
+            alert("lose");
+        } else if (cMove === "paper") {
+            alert("win");
+        } else if (cMove === "scizzors") {
+            alert("lose");
+        } else if (cMove === "lizard") {
+            alert("draw");
+        } else if (cMove === "spock") {
+            alert("win");
+        }
     } else if (pMove === "spock") {
-        let pChoice = choices[3];
-        console.log(pChoice);
-    } else {
-        alert("error!");
+        if (cMove === "rock") {
+            alert("win");
+        } else if (cMove === "paper") {
+            alert("lose");
+        } else if (cMove === "scizzors") {
+            alert("win");
+        } else if (cMove === "lizard") {
+            alert("lose");
+        } else if (cMove === "spock") {
+            alert("draw");
+        }
     }
+
 }
