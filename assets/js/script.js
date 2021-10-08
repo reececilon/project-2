@@ -18,13 +18,25 @@ for (let button of buttons) {
         } else if (moveType === "spock") {
             spockMove();
             compMove();
-        } else {
-            alert("Unknown moveType! Aborting!")
+        } else if (moveType === "reset") {
+            reset();
         }
 
     });
 }
 
+
+function reset() {
+    
+    document.getElementById("comp-move").src = "assets/images/rock-spock.png";
+    document.getElementById("comp-move").setAttribute('class', 'match');
+
+    document.getElementById("player-move").src = "assets/images/rock-spock.png";
+    document.getElementById("player-move").setAttribute('class', 'match');
+
+    document.getElementById("p-score").innerText = 0;
+    document.getElementById("c-score").innerText = 0;
+}
 
 /**
  * Changes the comp move based on a random number and adds the corresponding class
