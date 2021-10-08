@@ -102,64 +102,83 @@ function moveCompare() {
     
     if (pMove === "rock") {
         if (cMove === "rock") {
-            alert("draw");
-        } else if (cMove === "Paper") {
-            alert("lose");
+            setTimeout(function(){ alert("Draw"); }, 150);
+        } else if (cMove === "paper") {
+            loseScore()
         } else if (cMove === "scizzors") {
-            alert("win");
+            winScore();
         } else if (cMove === "lizard") {
-            alert("win");
+            winScore();
         } else if (cMove === "spock") {
-            alert("lose");
+            loseScore()
         }
     } else if (pMove === "paper") {
         if (cMove === "rock") {
-            alert("win");
+            winScore();
         } else if (cMove === "paper") {
-            alert("draw");
+            setTimeout(function(){ alert("Draw"); }, 150);
         } else if (cMove === "scizzors") {
-            alert("lose");
+            loseScore()
         } else if (cMove === "lizard") {
-            alert("lose");
+            loseScore()
         } else if (cMove === "spock") {
-            alert("win");
+            winScore();
         }
     } else if (pMove === "scizzors") {
         if (cMove === "rock") {
-                alert("lose");
+            loseScore()
         } else if (cMove === "paper") {
-                alert("win");
+            winScore();
         } else if (cMove === "scizzors") {
-                alert("draw");
+            setTimeout(function(){ alert("Draw"); }, 150);
         } else if (cMove === "lizard") {
-                alert("win");
+            winScore();
         } else if (cMove === "spock") {
-                alert("lose");
+            loseScore()
         }
     } else if (pMove === "lizard") {
         if (cMove === "rock") {
-            alert("lose");
+            loseScore()
         } else if (cMove === "paper") {
-            alert("win");
+            winScore();
         } else if (cMove === "scizzors") {
-            alert("lose");
+            loseScore()
         } else if (cMove === "lizard") {
-            alert("draw");
+            setTimeout(function(){ alert("Draw"); }, 150);
         } else if (cMove === "spock") {
-            alert("win");
+            winScore();
         }
     } else if (pMove === "spock") {
         if (cMove === "rock") {
-            alert("win");
+            winScore();
         } else if (cMove === "paper") {
-            alert("lose");
+            loseScore()
         } else if (cMove === "scizzors") {
-            alert("win");
+            winScore();
         } else if (cMove === "lizard") {
-            alert("lose");
+            loseScore()
         } else if (cMove === "spock") {
-            alert("draw");
+            setTimeout(function(){ alert("Draw"); }, 150);
         }
     }
+}
 
+/**
+ * Counts the players wins
+ */
+function winScore() {
+    let pScore = parseInt(document.getElementById("p-score").innerText);
+    pScore++;
+    document.getElementById("p-score").innerText = pScore;
+    setTimeout(function(){ alert("win"); }, 150);
+}
+
+/**
+ * Counts the computer's wins
+ */
+function loseScore() {
+    let cScore = parseInt(document.getElementById("c-score").innerText);
+    cScore++;
+    document.getElementById("c-score").innerText = cScore;
+    setTimeout(function(){ alert("lose"); }, 150);
 }
