@@ -1,35 +1,30 @@
-/**
- * When Dom is loaded, event listeners are added to buttons which run moveSelector function.
- */
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+var buttons = document.getElementsByTagName("button");
     
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            let moveType = this.getAttribute("data-type");
-            
-            if (moveType === "rock") {
-                rockMove();
-                compMove();
-            } else if (moveType === "paper") {
-                paperMove();
-                compMove();
-            } else if (moveType === "scizzors") {
-                scizzorsMove();
-                compMove();
-            } else if (moveType === "lizard") {
-                lizardMove();
-                compMove();
-            } else if (moveType === "spock") {
-                spockMove();
-                compMove();
-            } else {
-                alert("Unknown moveType! Aborting!")
-            }
+for (let button of buttons) {
+    button.addEventListener("click", function() {
+        let moveType = this.getAttribute("data-type");
+        if (moveType === "rock") {
+            rockMove();
+            compMove();
+        } else if (moveType === "paper") {
+            paperMove();
+            compMove();
+        } else if (moveType === "scizzors") {
+            scizzorsMove();
+            compMove();
+        } else if (moveType === "lizard") {
+            lizardMove();
+            compMove();
+        } else if (moveType === "spock") {
+            spockMove();
+            compMove();
+        } else {
+            alert("Unknown moveType! Aborting!")
+        }
 
-        });
-    }
-});
+    });
+}
+
 
 /**
  * Changes the comp move based on a random number and adds the corresponding class
