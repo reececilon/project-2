@@ -114,7 +114,7 @@ function moveCompare() {
     
     if (pMove === "rock") {
         if (cMove === "rock") {
-            setTimeout(function(){ alert("Draw"); }, 150);
+            drawMark()
         } else if (cMove === "paper") {
             loseScore()
         } else if (cMove === "scizzors") {
@@ -128,7 +128,7 @@ function moveCompare() {
         if (cMove === "rock") {
             winScore();
         } else if (cMove === "paper") {
-            setTimeout(function(){ alert("Draw"); }, 150);
+            drawMark()
         } else if (cMove === "scizzors") {
             loseScore()
         } else if (cMove === "lizard") {
@@ -142,7 +142,7 @@ function moveCompare() {
         } else if (cMove === "paper") {
             winScore();
         } else if (cMove === "scizzors") {
-            setTimeout(function(){ alert("Draw"); }, 150);
+            drawMark()
         } else if (cMove === "lizard") {
             winScore();
         } else if (cMove === "spock") {
@@ -156,7 +156,7 @@ function moveCompare() {
         } else if (cMove === "scizzors") {
             loseScore()
         } else if (cMove === "lizard") {
-            setTimeout(function(){ alert("Draw"); }, 150);
+            drawMark()
         } else if (cMove === "spock") {
             winScore();
         }
@@ -170,7 +170,7 @@ function moveCompare() {
         } else if (cMove === "lizard") {
             loseScore()
         } else if (cMove === "spock") {
-            setTimeout(function(){ alert("Draw"); }, 150);
+            drawMark()
         }
     }
 }
@@ -199,6 +199,14 @@ function loseScore() {
     setTimeout(function(){ swal({
         title: "Oh no!",
         icon: "error",
+        button: "OK",
+      }); }, 150);
+}
+
+function drawMark() {
+    setTimeout(function(){ swal({
+        title: "It's a draw...",
+        icon: "warning",
         button: "OK",
       }); }, 150);
 }
