@@ -186,7 +186,8 @@ function winScore() {
         title: "win",
         icon: "success",
         button: false,
-      }); }, 150);
+        timer: 1500,
+      }); }, 200);
 }
 
 /**
@@ -200,7 +201,8 @@ function loseScore() {
         title: "lose",
         icon: "error",
         button: false,
-      }); }, 150);
+        timer: 1500,
+      }); }, 200);
 }
 
 function drawMark() {
@@ -208,5 +210,6 @@ function drawMark() {
         title: "draw",
         icon: "warning",
         button: false,
-      }); }, 150);
+        timer: 1500,
+      }); }, 200);
 }
