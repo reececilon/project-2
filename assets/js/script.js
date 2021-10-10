@@ -183,9 +183,9 @@ function winScore() {
     pScore++;
     document.getElementById("p-score").innerText = pScore;
     setTimeout(function(){ swal({
-        title: "You won!",
+        title: "win",
         icon: "success",
-        button: "OK",
+        button: false,
       }); }, 150);
 }
 
@@ -197,16 +197,16 @@ function loseScore() {
     cScore++;
     document.getElementById("c-score").innerText = cScore;
     setTimeout(function(){ swal({
-        title: "Oh no!",
+        title: "lose",
         icon: "error",
-        button: "OK",
+        button: false,
       }); }, 150);
 }
 
 function drawMark() {
     setTimeout(function(){ swal({
-        title: "It's a draw...",
+        title: "draw",
         icon: "warning",
-        button: "OK",
+        button: false,
       }); }, 150);
 }

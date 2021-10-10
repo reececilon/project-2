@@ -166,3 +166,15 @@ header {
     }
 
 }
+
+.swal-modal {
+    background-color: #7498CC;
+    border: 3px solid #211F20;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .swal-icon--success:after, .swal-icon--success:before, .swal-icon--success__hide-corners {
+    background-color: #7498CC;
+  }
