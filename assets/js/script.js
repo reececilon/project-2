@@ -182,7 +182,11 @@ function winScore() {
     let pScore = parseInt(document.getElementById("p-score").innerText);
     pScore++;
     document.getElementById("p-score").innerText = pScore;
-    setTimeout(function(){ alert("win"); }, 150);
+    setTimeout(function(){ swal({
+        title: "You won!",
+        icon: "success",
+        button: "OK",
+      }); }, 150);
 }
 
 /**
@@ -192,5 +196,9 @@ function loseScore() {
     let cScore = parseInt(document.getElementById("c-score").innerText);
     cScore++;
     document.getElementById("c-score").innerText = cScore;
-    setTimeout(function(){ alert("lose"); }, 150);
+    setTimeout(function(){ swal({
+        title: "Oh no!",
+        icon: "error",
+        button: "OK",
+      }); }, 150);
 }
