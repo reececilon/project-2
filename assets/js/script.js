@@ -1,5 +1,11 @@
+/**
+ * const used for the DOM
+ */
 var buttons = document.getElementsByTagName("button");
-    
+
+/**
+ * Adding event listeners to all the buttons
+ */
 for (let button of buttons) {
     button.addEventListener("click", function() {
         let moveType = this.getAttribute("data-type");
