@@ -8,10 +8,13 @@
     <title>Rock to Spock</title>
 </head>
 <body>
+    <!-- Game header and logo -->
     <header>
         <h1 id="heading">Rock to Spock <i class="far fa-hand-rock"></i></h1>
     </header>
+    <!-- Section containing the game -->
     <div id="game-section">
+        <!-- Controls section, holding all the buttons to play the game -->
         <div id="controls">
             <button data-type="rock" class="control">rock</button>
             <button data-type="paper" class="control">paper</button>
@@ -20,16 +23,20 @@
             <button data-type="spock" class="control">spock</button>
             <button data-type="reset" id="reset">restart</button>
         </div>
+        <!-- play area where the main part of the game is displayed, showing rock, paper, scizzors, lizard and spock images -->
         <div id="play-area">
+            <!-- Player's move -->
             <div id="player" class="inline">
                 <h2 class="players">Player</h2>
                 <img src="assets/images/rock-spock.png" id="player-move"  class="match" alt="Image of rock, paper, scizzors, spock, game"/>
             </div>
+            <!-- Computer's move -->
             <div id="computer" class="inline">
                 <h2 class="players">Computer</h2>
                 <img src="assets/images/rock-spock.png" id="comp-move" class="match" alt="Image of rock, paper, scizzors, spock, game"/>
             </div>
         </div>
+        <!-- Score board, keeping track of player and computer score -->
         <div id="score-board">
             <h3>Score board</h3>
             <br>
