@@ -1,7 +1,7 @@
 /**
  * const used for the DOM
  */
-var buttons = document.getElementsByTagName("button");
+const buttons = document.getElementsByTagName("button");
 
 /**
  * Adding event listeners to all the buttons
@@ -27,12 +27,11 @@ for (let button of buttons) {
         } else if (moveType === "reset") {
             reset();
         }
-
     });
 }
 
 /**
- * Resets the score board and the player and computer move
+ * Resets the score board and the player and computer moves
  */
 function reset() {
     
@@ -68,7 +67,8 @@ function compMove() {
         document.getElementById("comp-move").src = "assets/images/spock.png";
         document.getElementById("comp-move").setAttribute('class', 'spock');
     } else {
-        alert("something wrong");
+        alert("Unknown cMoveRandom! Restarting...");
+        reset();
     }
 
     moveCompare();
@@ -121,72 +121,49 @@ function spockMove() {
 function moveCompare() {
     let pMove = document.getElementById("player-move").getAttribute("class"); 
     let cMove = document.getElementById("comp-move").getAttribute("class");
-    
-    if (pMove === "rock") {
-        if (cMove === "rock") {
-            drawMark()
-        } else if (cMove === "paper") {
-            loseScore()
-        } else if (cMove === "scizzors") {
-            winScore();
-        } else if (cMove === "lizard") {
-            winScore();
-        } else if (cMove === "spock") {
-            loseScore()
+   
+    if (pMove !== cMove) {
+        if (pMove === "rock") {
+            if (cMove === "scizzors" || cMove === "lizard") {
+                winScore();
+            } else {
+                loseScore();
+            }
+        } else if (pMove === "paper") {
+            if (cMove === "rock" || cMove === "spock") {
+                winScore();
+            } else {
+                loseScore();
+            }
+        } else if (pMove === "scizzors") {
+            if (cMove === "paper" || cMove === "lizard") {
+                winScore();
+            } else {
+                loseScore();
+            }
+        } else if (pMove === "lizard") {
+            if (cMove === "paper" || cMove === "spock") {
+                winScore();
+            } else {
+                loseScore();
+            }
+        } else if (pMove === "spock") {
+            if (cMove === "scizzors" || cMove === "rock") {
+                winScore();
+            } else {
+                loseScore();
+            }
+        } else {
+            alert("Unknown pMove! Restarting...");
+            reset();
         }
-    } else if (pMove === "paper") {
-        if (cMove === "rock") {
-            winScore();
-        } else if (cMove === "paper") {
-            drawMark()
-        } else if (cMove === "scizzors") {
-            loseScore()
-        } else if (cMove === "lizard") {
-            loseScore()
-        } else if (cMove === "spock") {
-            winScore();
-        }
-    } else if (pMove === "scizzors") {
-        if (cMove === "rock") {
-            loseScore()
-        } else if (cMove === "paper") {
-            winScore();
-        } else if (cMove === "scizzors") {
-            drawMark()
-        } else if (cMove === "lizard") {
-            winScore();
-        } else if (cMove === "spock") {
-            loseScore()
-        }
-    } else if (pMove === "lizard") {
-        if (cMove === "rock") {
-            loseScore()
-        } else if (cMove === "paper") {
-            winScore();
-        } else if (cMove === "scizzors") {
-            loseScore()
-        } else if (cMove === "lizard") {
-            drawMark()
-        } else if (cMove === "spock") {
-            winScore();
-        }
-    } else if (pMove === "spock") {
-        if (cMove === "rock") {
-            winScore();
-        } else if (cMove === "paper") {
-            loseScore()
-        } else if (cMove === "scizzors") {
-            winScore();
-        } else if (cMove === "lizard") {
-            loseScore()
-        } else if (cMove === "spock") {
-            drawMark()
-        }
+    } else {
+        drawMark();
     }
 }
 
 /**
- * Counts the players wins
+ * Counts the players wins and shows popup for win
  */
 function winScore() {
     let pScore = parseInt(document.getElementById("p-score").innerText);
@@ -201,7 +178,7 @@ function winScore() {
 }
 
 /**
- * Counts the computer's wins
+ * Counts the computer's wins and shows popup for player losing
  */
 function loseScore() {
     let cScore = parseInt(document.getElementById("c-score").innerText);
