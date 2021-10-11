@@ -11,7 +11,6 @@ body {
 }
 
 /* Styiling the Header */
-
 header {
     background-color: #7498CC;
     color: #211F20;
@@ -20,11 +19,10 @@ header {
 #heading {
     text-align: center;
     padding: 5px 0;
-    font-size: 4vw;
+    font-size: 4rem;
 }
 
 /* Styling the controls area */
-
 .control, #reset {
     margin: 20px 10px;
     width: 60px;
@@ -54,7 +52,6 @@ header {
 }
 
 /* Styling for play area */
-
 #play-area {
     text-align: center;
     background-color: rgba(106, 107, 108, .1);
@@ -80,11 +77,10 @@ header {
 .players {
     color: #7498CC;
     margin: 10px 0;
-    font-size: 2vw;
+    font-size: 1.3rem;
 }
 
 /* styling the score board */
-
 #score-board {
     background-color: rgba(106, 107, 108, .1);
     width: 250px;
@@ -96,25 +92,23 @@ header {
 
 #score-board > h3 {
     color: #7498CC;
-    font-size: 1.5vw;
+    font-size: 1.2rem;
 }
 
 #score-board > p {
     color: #7498CC;
-    font-size: 1vw;
+    font-size: 0.8rem;
 }
 
 /* For screen sizes below 700px */
-
 @media screen and (max-width: 700px) {
-    
+
     /* Heading styling */
     #heading {
-        font-size: 6vw;
+        font-size: 3rem;
     }
 
     /* Controls section styling */
-
     .inline {
         width: 50%;
     }
@@ -122,35 +116,17 @@ header {
     .control {
         margin: 15px 10px;
     }
-
-    /* Play area section styling */
-
-    .players {
-        font-size: 3vw;
-    }
-
-    /* Score board styling */
-
-    #score-board > h3 {
-        font-size: 2.5vw;
-    }
-
-    #score-board > p {
-        font-size: 2vw;
-    }
 }
 
 /* For screen sizes smaller than 400px */
 @media screen and (max-width: 400px) {
 
-    /* Heading styling */
-
+    /* Heading style */
     #heading {
-        font-size: 6.5vw;
+        font-size: 2rem;
     }
     
     /* Controls area styling */
-
     #controls {
         padding: 10px;
     }
@@ -168,38 +144,31 @@ header {
     }
 
     /* Play area styling */
-
     .players {
-        font-size: 3.5vw;
+        font-size: 1.2rem;
     }
 
     /* Score board styling */
-
     #score-board {
         margin: 10px auto;
         width: 200px;
     }
 
     #score-board > h3 {
-        font-size: 3vw;
+        color: #7498CC;
+        font-size: 1rem;
     }
-
-    #score-board > p {
-        font-size: 2.5vw;
-    }
-
 }
 
 /* popup styling */
-
 .swal-modal {
     background-color: #7498CC;
     border: 3px solid #211F20;
     width: 200px;
     height: 200px;
     border-radius: 50%;
-  }
+}
 
-  .swal-icon--success:after, .swal-icon--success:before, .swal-icon--success__hide-corners {
+.swal-icon--success:after, .swal-icon--success:before, .swal-icon--success__hide-corners {
     background-color: #7498CC;
-  }
+}
