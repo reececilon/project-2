@@ -104,15 +104,16 @@ header {
     font-size: 1vw;
 }
 
-/* For screen sizes below 500px */
+/* For screen sizes below 700px */
 
 @media screen and (max-width: 700px) {
     
-    
-    /*header*/
+    /* Heading styling */
     #heading {
         font-size: 6vw;
     }
+
+    /* Controls section styling */
 
     .inline {
         width: 50%;
@@ -122,9 +123,13 @@ header {
         margin: 15px 10px;
     }
 
+    /* Play area section styling */
+
     .players {
         font-size: 3vw;
     }
+
+    /* Score board styling */
 
     #score-board > h3 {
         font-size: 2.5vw;
@@ -135,15 +140,16 @@ header {
     }
 }
 
+/* For screen sizes smaller than 400px */
 @media screen and (max-width: 400px) {
+
+    /* Heading styling */
 
     #heading {
         font-size: 6.5vw;
     }
     
-    #score-board {
-        width: 200px;
-    }
+    /* Controls area styling */
 
     #controls {
         padding: 10px;
@@ -161,12 +167,17 @@ header {
         margin: 0 0 10px 0;
     }
 
+    /* Play area styling */
+
     .players {
         font-size: 3.5vw;
     }
 
+    /* Score board styling */
+
     #score-board {
         margin: 10px auto;
+        width: 200px;
     }
 
     #score-board > h3 {
