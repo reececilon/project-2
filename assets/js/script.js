@@ -25,7 +25,9 @@ for (let button of buttons) {
     });
 }
 
-
+/**
+ * Resets the score board and the player and computer move
+ */
 function reset() {
     
     document.getElementById("comp-move").src = "assets/images/rock-spock.png";
@@ -107,7 +109,9 @@ function spockMove() {
 }
 
 
-
+/**
+ * Compares the player's and computers moves
+ */
 function moveCompare() {
     let pMove = document.getElementById("player-move").getAttribute("class"); 
     let cMove = document.getElementById("comp-move").getAttribute("class");
@@ -205,6 +209,9 @@ function loseScore() {
       }); }, 200);
 }
 
+/**
+ * Shows a popup notification for when player and computer draw
+ */
 function drawMark() {
     setTimeout(function(){ swal({
         title: "draw",
