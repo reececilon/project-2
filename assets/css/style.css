@@ -135,7 +135,7 @@ header {
     }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
 
     #heading {
         font-size: 6.5vw;
@@ -145,16 +145,28 @@ header {
         width: 200px;
     }
 
-    .control {
-        margin: 10px 5px;
+    #controls {
+        padding: 10px;
+    }
+
+    .control, #reset {
+        margin: 5px 5px;
+        font-size: 60%;
+        width: 50px;
+        height: 50px;
     }
 
     .inline {
         width: 60%;
+        margin: 0 0 10px 0;
     }
 
     .players {
         font-size: 3.5vw;
+    }
+
+    #score-board {
+        margin: 10px auto;
     }
 
     #score-board > h3 {
@@ -166,15 +178,3 @@ header {
     }
 
 }
-
-.swal-modal {
-    background-color: #7498CC;
-    border: 3px solid #211F20;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-  }
-
-  .swal-icon--success:after, .swal-icon--success:before, .swal-icon--success__hide-corners {
-    background-color: #7498CC;
-  }
