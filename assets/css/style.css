@@ -68,7 +68,6 @@ header {
 
 .rock, .paper, .scizzors, .lizard, .spock, .match {
     width: 100%;
-    height: same-as-width;
     border-radius: 50%;
     border-radius: 50%;
     border: 3px solid #7498CC;
