@@ -35,10 +35,10 @@ for (let button of buttons) {
  */
 function reset() {
     
-    document.getElementById("comp-move").src = "assets/images/rock-spock.png";
+    document.getElementById("comp-move").src = "assets/images/rock-spock.webp";
     document.getElementById("comp-move").setAttribute('class', 'match');
 
-    document.getElementById("player-move").src = "assets/images/rock-spock.png";
+    document.getElementById("player-move").src = "assets/images/rock-spock.webp";
     document.getElementById("player-move").setAttribute('class', 'match');
 
     document.getElementById("p-score").innerText = 0;
