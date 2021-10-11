@@ -1,3 +1,5 @@
+# Rock to Spock
+
 <img src="assets/images/responsive.png" alt="Image of Rock to Spock site on different screen sizes">
 <img src="assets/images/header.png" alt="Image of the Rock to Spock header and logo">
 <img src="assets/images/controls.png" alt="Image of the different moves that the player can select">
