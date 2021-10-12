@@ -63,3 +63,11 @@ In the Future, I would like to make the move images for the player and computer 
 - I confirm that the site is responsive on all devices and screen sizes. 
     - This was tested using the Chrome Devtools,
     - and also by testing the site on different devices.
+
+## Bugs 
+### Solved Bugs
+- The Header, Score board text and game area text, for smaller screen sizes, was very small due using font-size in *%* units.
+    - I solved this by using *rem* instead of *%*.
+- On smaller screen sizes, the buttons would appear below on another, but were misaligned.
+    - This was due to the buttons content width being too large for the buttons themselves on smaller devises.
+    - I solved this by reducing the text of the buttons for smaller devices and changing the margins around each button.
