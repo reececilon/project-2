@@ -56,7 +56,7 @@ In the Future, I would like to make the move images for the player and computer 
 - I confirm that the results are always correct
     - I have tested by playing on different devices such as Macbook, Mobile phone (Samsung), and also Ipad.
 - I confirm that the header, controls, game area, score board are all legible and easy to read.
-- I confirm that the colour scheme and fonts are easy to read and acesible by running the site through the Devtools lighthouse report generator.
+- I confirm that the colour scheme and fonts are easy to read and accessible by running the site through the Devtools lighthouse report generator.
 
 <img src="assets/images/lighthouse.png" alt="Image showing the lighthouse report of the site">
 
