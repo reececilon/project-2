@@ -49,3 +49,8 @@ Rock to Spock is an interesting take on the original rock, paper scizzors game. 
 ## Future Feature to Implement
 
 In the Future, I would like to make the move images for the player and computer to rotate before they change to the selected moves. This would represent how the original game is played, when the two players would say each move whilst bouncing their fists before deciding their move.
+
+# Testing
+
+
+<img src="assets/images/lighthouse.png" alt="Image showing the lighthouse report of the site">
