@@ -52,5 +52,14 @@ In the Future, I would like to make the move images for the player and computer 
 
 # Testing
 
+- This site was tested on various different browsers, such as: Chrome, Firefox and Safari
+- I confirm that the results are always correct
+    - I have tested by playing on different devices such as Macbook, Mobile phone (Samsung), and also Ipad.
+- I confirm that the header, controls, game area, score board are all legible and easy to read.
+- I confirm that the colour scheme and fonts are easy to read and acesible by running the site through the Devtools lighthouse report generator.
 
 <img src="assets/images/lighthouse.png" alt="Image showing the lighthouse report of the site">
+
+- I confirm that the site is responsive on all devices and screen sizes. 
+    - This was tested using the Chrome Devtools,
+    - and also by testing the site on different devices.
