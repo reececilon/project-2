@@ -71,3 +71,12 @@ In the Future, I would like to make the move images for the player and computer 
 - On smaller screen sizes, the buttons would appear below on another, but were misaligned.
     - This was due to the buttons content width being too large for the buttons themselves on smaller devises.
     - I solved this by reducing the text of the buttons for smaller devices and changing the margins around each button.
+
+## Validator Testing
+
+- HTML
+    - No errors were returned when running the site through the official [W3C HTML](https://validator.w3.org/nu/#textarea) validator
+- CSS
+    - No errors were returned when running the site through the [W3C CSS](https://jigsaw.w3.org/css-validator/validator) validator
+- JS
+    - No errors were returned when running the site through the JSHint [JSHint](https://jshint.com/) validator
