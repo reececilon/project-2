@@ -45,3 +45,7 @@ Rock to Spock is an interesting take on the original rock, paper scizzors game. 
     - Also, resetting the score board back to zero for both the player and the computer.
 
 <img src="assets/images/restart.png" alt="Image of the restart button">
+
+## Future Feature to Implement
+
+In the Future, I would like to make the move images for the player and computer to rotate before they change to the selected moves. This would represent how the original game is played, when the two players would say each move whilst bouncing their fists before deciding their move.
