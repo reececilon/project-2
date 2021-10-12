@@ -80,3 +80,23 @@ In the Future, I would like to make the move images for the player and computer 
     - No errors were returned when running the site through the [W3C CSS](https://jigsaw.w3.org/css-validator/validator) validator
 - JS
     - No errors were returned when running the site through the JSHint [JSHint](https://jshint.com/) validator
+
+## Unfixed Bugs
+No unfixed bugs
+
+# Deployment
+- The site was deployed on GitHub Pages. The following steps demonstate how to deploy the site.
+    - In the GitHub repository for the project, locate the settings tab,
+    - From the menu left of this, select the pages tab,
+    - Under the source section, select the main branch from the drop down menu and save,
+    - A live link will then be provided for the website
+
+The live link for the website is located here [Rock to Spock](https://reececilon.github.io/project-2/).
+
+# Credits 
+## Content
+- The popups alerts on the site were taken by [SweetAlert](https://sweetalert.js.org/)
+- The logo in the header was obtained from [FontAwesome](https://fontawesome.com/v5.15/icons/instagram?style=brands)
+
+## Media
+- The image for the game was taken from [UBuy](https://www.ubuy.co.in/search/index/view/product/B07D1CCBXG/s/rock-paper-scissors-lizard-spock-funny-nerd-tv-show-t-shirt/store/store/kk/dp?ref_p=dp-rp)
