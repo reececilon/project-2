@@ -15,8 +15,15 @@ Rock to Spock is an interesting take on the original rock, paper scizzors game. 
 <img src="assets/images/header.png" alt="Image of the Rock to Spock header and logo">
 
 - Game Controls
-    - 
+    - This includes six buttons to select the moves of: rock, paper, scizzors, lizard and spock.
+    - The buttons have the same colour scheme as the header, with blue text against a black background encircled by a blue border.
+    - The buttons also rotate when the user hovers over them to indicate that they are clickable.
+    - When the buttons are clicked, the game initiates and the images for the player and computer change from the rule image to the corresponding slected move.
 
 <img src="assets/images/controls.png" alt="Image of the different moves that the player can select">
+
+- Game Rules
+    - The game rules
+
 <img src="assets/images/moves.png" alt="Image of the game where player selects lizard and the computer selects paper">
 <img src="assets/images/scores.png" alt="Image showing the scores of both the player and computer">
