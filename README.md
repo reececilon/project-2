@@ -27,9 +27,21 @@ Rock to Spock is an interesting take on the original rock, paper scizzors game. 
 
 <img src="assets/images/rules.png" alt="Image showing the rules of the game">
 
-- Game area
+- Game Area
     - Once a move is selected by the user, the game is initiated and the player image is changed to their selected move.
     - Symultaneously and randomly the computer also selects a move to play and changes the corresponding image to match the selected move.
 
 <img src="assets/images/moves.png" alt="Image of the game where player selects lizard and the computer selects paper">
+
+- Score Board
+    - After the player and computer selects their moves, they are compared and then the score board keeps track of the wins of the player and computer.
+    - Whilst the score is recorded, a popup is initiated to inform the user whether they *win, lose or draw* against the computer.
+
 <img src="assets/images/scores.png" alt="Image showing the scores of both the player and computer">
+
+- Restart Button
+    - The game also has a *Restart* button. The background turns blue and the colour of the text turns black when the user hovers over the button to indicate that it is different from the other buttons.
+    - This button resets the game returning the player and the computer images to the starting image, showing the rules.
+    - Also, resetting the score board back to zero for both the player and the computer.
+
+<img src="assets/images/restart.png" alt="Image of the restart button">
