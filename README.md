@@ -10,7 +10,7 @@ Rock to Spock is an interesting take on the original rock, paper scizzors game. 
 - Header
     - Starting at the beginning of the page, the header includes the game title *Rock to Spock* and also the game logo.
     - The game logo shows a closed fist to represent the move of rock. 
-    - The text colour is blue up against a black background for optimal contrast.  
+    - The text colour is black up against a blue background for optimal contrast.  
 
 <img src="assets/images/header.png" alt="Image of the Rock to Spock header and logo">
 
